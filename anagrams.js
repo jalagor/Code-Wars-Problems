@@ -6,3 +6,5 @@ function findAnagrams( word, list){
 
     return list
 }
+const words = ['libl', 'llib', 'billl', 'noo']
+console.log(findAnagrams('bill', words))
