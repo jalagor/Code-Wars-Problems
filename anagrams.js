@@ -7,6 +7,9 @@ function findAnagrams( word, list ){
         return format(item) === format(word)
     })
 }
+
 function format(input){return input.split('').sort().join()}
+
 const words = ['libl', 'llib', 'billl', 'nooo']
+
 console.log(findAnagrams('bill', words))
