@@ -18,7 +18,8 @@ function findUniq(arr) {
 
 
  
-console.log(findUniq(edgeCase))
+console.log('edge case', findUniq(edgeCase))
+console.log('numbers', findUniq(numbers))
 var t1 = performance.now();
 
 console.log("findUniq took " + (t1 - t0) + " milliseconds.");
