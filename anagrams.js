@@ -3,15 +3,10 @@
 // return an array of all the anagrams or an empty array if there are none.
 
 function findAnagrams( word, list ){
-    const splitWord = word.split('').sort().join()
-    let tes="guy"
-    const newList = list.filter(item=>{
-       return item.length === word.length
+    return list.filter(item=>{
+        return format(item) === format(word)
     })
-    const finished =  newList.filter(item=>{
-        return item.split('').sort().join() == splitWord
-    })
-    return finished
 }
+function format(input){return input.split('').sort().join()}
 const words = ['libl', 'llib', 'billl', 'nooo']
 console.log(findAnagrams('bill', words))
