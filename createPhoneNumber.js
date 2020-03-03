@@ -2,7 +2,7 @@
 // that returns a string of those numbers in the form of a phone number.
 
 function createPhoneNumber(array){
-    let numbers = array.join().replace(/,/g, '')
+    let numbers = array.join('')
     return `(${numbers.substring(0, 3)}) ${numbers.substring(3, 6)}-${numbers.substring(6, 10)}`   
 }
 
