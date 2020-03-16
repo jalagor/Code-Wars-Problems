@@ -9,11 +9,14 @@
 
 function likes(names) {
     const options = { 
-      0: ()=>{ return 'no one likes this'}, 
-      1: ()=>{ return `${names[0]} likes this` },
-      2: ()=>{ return `${names[0]} and ${names[1]} like this`}, 
-      3: ()=>{ return `${names[0]}, ${names[1]} and ${names[2]} like this`},
-      4: ()=>{ return `${names[0]}, ${names[1]} and ${names.length - 2 } others like this`} 
-     }
-     return names.length > 4 ? options[4]() : options[names.length]()
-   }
+        0: ()=>{ return 'no one likes this'}, 
+        1: ()=>{ return `${names[0]} likes this` },
+        2: ()=>{ return `${names[0]} and ${names[1]} like this`}, 
+        3: ()=>{ return `${names[0]}, ${names[1]} and ${names[2]} like this`},
+        4: ()=>{ return `${names[0]}, ${names[1]} and ${names.length - 2 } others like this`} 
+    }
+    return names.length > 4 ? options[4]() : options[names.length]()
+}
+
+let list = ['tim', 'mark', 'jan', 'ben', 'nudnik'] 
+console.log(likes(list))
