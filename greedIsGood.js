@@ -10,27 +10,32 @@
 // each di should only be counted once 
  
 function score( dice ) {
-    let diValues = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
-    dice.map(di => diValues[di] += 1 )
-    // let diValues = dice.sort().join('')
-    let points = 0 
+  let points = 0 
+  let diValues = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+  dice.map(di => diValues[di] += 1 )
 
-    
-    
-    // diValues.includes('111') ? points += 1000 :
-    // diValues.includes('222') ? points += 200 :
-    // diValues.includes('333') ? points += 300 :
-    // diValues.includes('444') ? points += 400 :
-    // diValues.includes('555') ? points += 500 :
-    // diValues.includes('666') ? points += 600 :
-    // null 
-
-    // diValues.match(/\d{3}/) ? : null
-   console.log(diValues)
-    return points
-    
-    
+  for( let i = 1; i <= 6; i++ ){
+     scoreTriples(diValues, i) ? (points +=(100*i)) && (diValues[i] -= 3) : null
+     scoreTripleOnes(points, i) ? points = 1000 : null  
+     i === 1 ? points += (diValues[i]*100)
+     : i === 5 ?  points += (diValues[i]*50)
+     : null
   }
+  return points
+}
 
-  let rolls = [6,1,1,5,2]
-  console.log(score(rolls))
+function scoreTriples(object, x){
+  return  object[x] >= 3  ? true : false
+}
+
+function scoreTripleOnes(total, x){
+  return (total === 100 && x === 1) ? true : false
+}
+
+
+
+
+
+
+let rolls = [1,1,1,1,1]
+console.log(score(rolls))
