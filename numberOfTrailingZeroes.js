@@ -4,10 +4,11 @@
 
 function zeros (n) {
     let trailingZeros = 0 
-    for (let i = 5; n / i >= 1; i *= 5){
-        trailingZeros += n / i; 
+    while (n>0) {
+        n = Math.floor(n/5);
+        trailingZeros += n
     }
     return trailingZeros
 }  
  
-console.log(zeros(10))
+console.log(zeros(30))
