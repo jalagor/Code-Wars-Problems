@@ -6,7 +6,7 @@
 // domainName("https://www.cnet.com") == "cnet"
 
 function domainName(url){
-    return url
+    return url.match(/h([^;]*)\//g)[0].replace(/\./g, )
 }
 const a = 'https://www.google.com'
 
