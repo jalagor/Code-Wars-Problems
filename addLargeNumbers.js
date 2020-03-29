@@ -16,7 +16,7 @@ function add(str1, str2) {
     }
 
     let carry = 0; 
-    let a, b, temp, digitsum;
+    let a, b, temp, digitSum;
     for (let i = 0; i < str1.length; i++) {
         a = parseInt(str1.charAt(str1.length - 1 - i));      
         b = parseInt(str2.charAt(str2.length - 1 - i));     
