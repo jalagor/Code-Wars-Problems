@@ -1,4 +1,5 @@
-// Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. 
+// Implement a function likes :: [String] -> String, which must take in input array, 
+// containing the names of people who like an item. 
 // It must return the display text as shown in the examples: 
 
 // likes [] // must be "no one likes this"
