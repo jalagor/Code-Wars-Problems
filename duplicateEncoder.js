@@ -10,7 +10,17 @@
 // "(( @"     =>  "))((" 
 
 function duplicateEncode(word){
-    
-        
+    let encoded = ''
+    let formatted = word.toLowerCase().split('').sort().join('')
+    let matches = formatted.match(/(.)\1+/g) || []
+
+    console.log(matches)
+    for(let i = 0; i < matches.length; i++){
+        matches[i] = matches[i].charAt(1)
+    }
+    for(c of word.toLowerCase()){matches.includes(c) ? encoded += ')' : encoded += '('}
+    return encoded
 }
     
+
+console.log(duplicateEncode('din'))
