@@ -3,7 +3,7 @@
 // or ")" if that character appears more than once in the original string. 
 // Ignore capitalization when determining if a character is a duplicate.
 
-// Examples
+// Examples:
 // "din"      =>  "((("
 // "recede"   =>  "()()()"
 // "Success"  =>  ")())())"
