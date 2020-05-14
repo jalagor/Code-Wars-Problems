@@ -3,15 +3,13 @@
 // rules for a solved board:  
 // each column and row must contain 1-9 exactly once
 // each of the 9 3x3 blocks must contain 1-9 exactly once 
-// 0 represents an empty square on the board, board's must not contain empty squares  
-// 
+// 0 represents an empty square on the board, board's must not contain empty squares 
 
 function validSolution(board){
     for(let y = 0; y < 9; y++){
         let sumColumn = 0, sumRow = 0;
 
         for(let x = 0; x < 9; x++){
-            if (board[x][y] == 0){return false}
             sumColumn += board[x][y]
             sumRow += board[y][x]
         }
@@ -19,9 +17,15 @@ function validSolution(board){
     }
 
     for(let i = 0; i < 9 ;i+=3){
-        console.log('hit')
+        for(let j = 0; j<9; j += 3){
+            let block = 0;
+           
+            for(let k = 0; k<3; k++){
+                block += board[i+k][j] += board[i+k][j+1] += board[i+k][j+2]
+            }
+            if(block !== 45){return false}
+        }
     }
-
     return true
 }
 
