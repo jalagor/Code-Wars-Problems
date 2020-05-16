@@ -22,3 +22,11 @@
 // Return value should contain array of arrays, of 0 and 1, for example for given size 5 result should be:
 
 // [[1,1,1,1,1],[0,0,0,0,1],[1,1,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]  
+ 
+function makeSpiral(size){
+    let spiral = Array.from({length: size}, (v, i) => Array.from({length: size}, (v, i) => 0) )
+
+    return spiral
+}
+
+console.log( makeSpiral(5) )
