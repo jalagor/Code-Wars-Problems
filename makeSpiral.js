@@ -24,9 +24,9 @@
 // [[1,1,1,1,1],[0,0,0,0,1],[1,1,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]  
  
 function makeSpiral(size){
-    let spiral = 
+    let spiral = Array.from({length: size}, (v, i) => Array.from({length: size}, (v, i) => 0) )
 
-
+    return spiral
 }
 
 console.log( makeSpiral(5) )
