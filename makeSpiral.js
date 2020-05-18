@@ -24,9 +24,15 @@
 // [[1,1,1,1,1],[0,0,0,0,1],[1,1,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]  
  
 function makeSpiral(size){
-    let spiral = Array.from({length: size}, (v, i) => Array.from({length: size}, (v, i) => 0) )
+    let spiral = Array.from({length: size}, (v, i) => Array.from({length: size}, (v, i) => 1) )
+
 
     return spiral
 }
 
-console.log( makeSpiral(5) )
+console.log( makeSpiral(5) )  
+  
+  
+// rules: 
+// spiral[0] and spiral[n] will always remain unchanged
+// spiral[1] will change 1 to 0 in elements up to spiral[1][N-1]..
