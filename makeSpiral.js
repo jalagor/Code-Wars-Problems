@@ -34,5 +34,7 @@ console.log( makeSpiral(5) )
   
   
 // rules: 
-// spiral[0] and spiral[n] will always remain unchanged
-// spiral[1] will change 1 to 0 in elements up to spiral[1][N-1]..
+// spiral[0] and spiral[n] will always remain unchanged, exclude them from loop
+// spiral[1] elements will change 1 to 0 in elements up to spiral[1][N-1]
+// spiral[N][N-1] will change from 1 to 0 
+// penultimate array elements, exclding first and lsat, will change to 0 
