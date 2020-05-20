@@ -43,7 +43,7 @@ function makeSpiral(size){
     return spiral
 }
 
-console.log( makeSpiral(10) )  
+console.log( makeSpiral(7) )  
   
   
 // rules: 
