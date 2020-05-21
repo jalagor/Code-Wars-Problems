@@ -50,4 +50,8 @@ console.log( makeSpiral(7) )
 // spiral[0] and spiral[n] will always remain unchanged, exclude them from loop
 // spiral[1] elements will change 1 to 0 in elements up to spiral[1][N-1]
 // spiral[N][N-1] will change from 1 to 0 
-// penultimate array elements, exclding first and lsat, will change to 0 
+// penultimate array elements, exclding first and lsat, will change to 0  
+// the pattern seems to be 0 => N-1, just N-1, increment to 1 => N-3 + N-1, 1 + N-3 + N-1 
+// a loop that with an if statement that determines odd/even(?, this may need more testing), and carries out setting verses looping
+// this would point to 3 incrementers minimum, outermost for hitting each array, secondary for each element in the array 
+//          third for setting the next spiral boundry (N-1, N-3, etc.)
