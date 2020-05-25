@@ -4,3 +4,5 @@
 function asciiToBinary(ascii){
     
 }
+
+console.log(asciiToBinary(54))
