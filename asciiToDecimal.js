@@ -2,6 +2,10 @@
 
 
 function asciiToBinary(ascii){
+    let binary = ascii.sort()
+
+
+    return binary
     
 }
 
