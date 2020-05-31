@@ -2,7 +2,7 @@
 
 
 function asciiToBinary(ascii){
-    let binary = ascii.sort()
+    let binary = ascii
 
 
     return binary
