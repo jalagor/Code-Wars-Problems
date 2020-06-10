@@ -19,6 +19,7 @@ function rgb(r, g, b){
     r > 255 ? r = 255 : r < 0 ? r = 0 : r = r 
     g > 255 ? g = 255 : g < 0 ? g = 0 : g = g
     b > 255 ? b = 255 : b < 0 ? b = 0 : b = b
+   
 
     // this needs to be refactored
     let digit1 = Math.floor(r / 16)
@@ -28,6 +29,13 @@ function rgb(r, g, b){
     let digit5 = Math.floor(b / 16)
     let digit6 = (((b/16) % 1) * 16)
     return c[digit1] += c[digit2] += c[digit3] += c[digit4] += c[digit5] += c[digit6]
+
+   
+} 
+
+function checkDigit(letter){
+    letter > 255 ? letter = 255 : letter < 0 ? letter = 0 : letter = letter 
+    return letter
 }
 
-console.log(rgb(260, 270, 256))
+console.log(rgb(200, 270, 256))
