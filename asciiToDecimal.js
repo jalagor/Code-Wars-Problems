@@ -2,10 +2,7 @@
 
 
 function asciiToBinary(ascii){
-    let binary = ascii
 
-
-    return binary
     
 }
 
