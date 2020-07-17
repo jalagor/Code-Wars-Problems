@@ -2,7 +2,7 @@
 
 
 function asciiToBinary(ascii){
-
+return ascii
     
 }
 
