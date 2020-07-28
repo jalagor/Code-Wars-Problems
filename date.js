@@ -21,11 +21,9 @@
 
 let john = {'mood': 50}, mood = john['mood'];
 
-function tellJoke(){
-    return mood > 0 ? (mood-- && tellJoke()) : 'crying'  
-}
+let tellJoke = () => mood > 0 ? (mood-- && tellJoke()) : 'crying'
 
-console.log(tellJoke())
+console.log( tellJoke() )
 
 
 // console.log( swipeRight(john, kate) )
