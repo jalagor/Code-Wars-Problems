@@ -45,17 +45,16 @@ function ascendingOrder(a){
     // let c = a.sort((a, b)=> a - b)
     let max = a.length
 
-    for (i = 0; i < max ; i++){
-        i % 2 === 0 ? 
-        b.splice(i, 1, a[i]) :
-        b.splice(i, 1, a[max-i])
-        console.log(a, b, i)
+    for (i = 0, j = (max - 1); i < max/2 ; i++, j--){
+        
+        b.splice(1+i, 1, a[max-1-i]) 
+        // b.splice(j, 1, a[j])
+        console.log(a, b, i, j)
+        // i % 2 === 0 ? 
+        // b.splice(i, 1, a[i]) :
+        // b.splice(i, 1, a[max-i])
     }
-    // console.log(a, b)
-    // for(i = 0; i < max; i++){
-    //     if (b[i] !== c[i]){return false}
-    //     console.log(a[i], b[i], c[i])
-    // }
+  
     return true
 }
 
