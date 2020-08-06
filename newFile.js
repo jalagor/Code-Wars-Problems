@@ -41,28 +41,26 @@ let bad2 = [1, 2, 3, 4, 5]
 
 
 function ascendingOrder(a){
-    let b = new Array(a.length).fill(0)
-    // let c = a.sort((a, b)=> a - b)
-    let max = a.length
+    let max = a.length, i, comparisonInt
 
-    for (i = 0, j = (max - 1); i < max/2 ; i++, j--){
-        
-        b.splice(1+i, 1, a[max-1-i]) 
-        // b.splice(j, 1, a[j])
-        console.log(a, b, i, j)
-        // i % 2 === 0 ? 
-        // b.splice(i, 1, a[i]) :
-        // b.splice(i, 1, a[max-i])
+    for (i = 0; i < (max/2) ; i++){
+
+        if( i != 0 && comparisonInt > a[i] ){
+            return false 
+        }
+        if( a[i] > a[max-1-i] ){
+            return false
+        }
+        comparisonInt = a[max-1-i]
     }
-  
     return true
 }
 
 
 console.log( ascendingOrder(doIt) )
-// console.log( ascendingOrder(odds) )
-// console.log( ascendingOrder(bad2) )
-// console.log( ascendingOrder(bad) )
+console.log( ascendingOrder(odds) )
+console.log( ascendingOrder(bad2) )
+console.log( ascendingOrder(bad) )
 
 
 
