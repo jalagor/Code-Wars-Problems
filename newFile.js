@@ -37,7 +37,7 @@
 let doIt = [1, 3, 5, 6, 4, 2]
 let odds = [1, 3, 5, 4, 2]
 let bad = [1, 2, 3, 4, 5, 6]
-let bad2 = [1, 2, 3, 4, 5]
+let bad2 = [1, 4, 5, 6, 3]
 
 
 function ascendingOrder(a){
@@ -48,6 +48,7 @@ function ascendingOrder(a){
         if( i != 0 && comparisonInt > a[i] ){
             return false 
         }
+
         if( a[i] > a[max-1-i] ){
             return false
         }
