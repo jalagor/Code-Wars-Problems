@@ -9,15 +9,15 @@
 const Calculator = function() {
     this.evaluate = string => { 
         let result = 0, 
-        array = string.split(' ') 
-        
+        array = string.split('-') 
+
         for(i = 0; i< array.length; i++){
             array[i] === '*' ? 
             result += operations('*', array[i-1], array[i+1]) : 
             result += 0
         }
         // console.log( operations('*', array[0], array[2] ) ) 
-        return result
+        return array
     } 
 };   
  
@@ -40,5 +40,5 @@ regex
 let calculate = new Calculator()
 // console.log(calculate.evaluate('173')) // 173
 console.log(calculate.evaluate('2 * 3')) // 5
-// console.log(calculate.evaluate('2 - 3 - 4')) // -5
+console.log(calculate.evaluate('2 - 3 - 4')) // -5
 // console.log(calculate.evaluate('10 * 5 / 2')) // 25
