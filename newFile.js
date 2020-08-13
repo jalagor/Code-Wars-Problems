@@ -197,4 +197,7 @@ console.log( ascendingOrder(bad) )
 
 // [output] integer64
 
-// The sum of the results for all get queries.
+// The sum of the results for all get queries.  
+  
+   
+  
