@@ -1,5 +1,15 @@
-function moveElementToEnd(array, valueToMove){
+// write a function that takes an array of integers and an integer 
+// the function should move all instances of the given integer to the end of the array  
+// the array should be mutated  
+// the order of other integers doesn't matter  
+// input: 3, [5, 1, 3, 2, 4, 3, 3, 6] => output: [5, 1, 2, 4, 6, 3, 3, 3] 5, 1, and 2 could be ordered differently
 
+
+function moveElementToEnd(array, valueToMove){   
+    for(i = 0; i<array.length; i++){
+        array[i] === valueToMove ? 
+
+    }
 } 
  
 let values = [1, 2, 3, 4, 2, 2, 5, 2] 
