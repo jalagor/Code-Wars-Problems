@@ -4,7 +4,7 @@
 // the order of other integers doesn't matter  
 // input: 3, [5, 1, 3, 2, 4, 3, 3, 6] => output: [5, 1, 2, 4, 6, 3, 3, 3] 5, 1, and 2 could be ordered differently
 
-
+// 2 whiles, in  out and swap
 function moveElementToEnd(array, valueToMove){   
     for(i = 0; i<array.length; i++){
         array[i] === valueToMove ? 
