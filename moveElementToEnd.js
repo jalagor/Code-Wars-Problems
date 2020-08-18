@@ -15,6 +15,11 @@ function moveElementToEnd(array, valueToMove){
     return array
 } 
  
+function sort(array, i, j){
+    let temp = array[j]  
+    let array[j] = array[i] 
+
+}
 let values = [1, 2, 3, 4, 2, 2, 5, 2] 
 let values2 = [2, 1, 2, 3, 4, 2, 2, 5]
 let values3 = [2, 1, 2, 3, 4, 2, 2, 5, 2]
