@@ -14,22 +14,34 @@
 // You may assume that the board passed in is valid in the context of a game of Tic-Tac-Toe. 
  
 function isSolved(board){
-    let zero = 0, rows, columns;
+    let zero = 0, rows, columns, diagonal1 = {'1':0, '2':0}, diagonal2 = {'1':0, '2':0};
+    
     for( i = 0; i < board.length; i++ ){
         rows = {'1':0, '2':0} ; 
         columns = {'1':0, '2':0} ; 
+
         for( j = 0;  j< board.length; j++ ){
             let rowPointer = board[i][j]
             let columnPointer = board[j][i]
             rowPointer == 0 ? zero++ : rows[`${rowPointer}`] += 1 
             columnPointer !== 0 ? columns[`${columnPointer}`] += 1 : null  
         } 
+
         if (rows['1'] == 3 || columns['1'] == 3){return 1} 
         if (rows['2'] == 3 || columns['2'] == 3){return 2} 
     } 
-     
-     
     
+    for(let i = 0; i < board.length; i++){
+        let pointer1 = board[2-i][i],
+        pointer2 = board[i][i]; 
+        
+        pointer1 !== 0 ? diagonal1[`${pointer1}`]++ : null
+        pointer2 !== 0 ? diagonal2[`${pointer2}`]++ : null
+    }
+    
+    if (diagonal1['1'] == 3 || diagonal2['1'] == 3){return 1} 
+    if (diagonal1['2'] == 3 || diagonal2['2'] == 3){return 2} 
+     
     return zero == 0 ? 0 : -1
 }
 
