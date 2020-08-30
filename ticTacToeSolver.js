@@ -14,7 +14,23 @@
 // You may assume that the board passed in is valid in the context of a game of Tic-Tac-Toe. 
  
 function isSolved(board){
-
+    let zero = 0, rows, columns;
+    for( i = 0; i < board.length; i++ ){
+        rows = {'1':0, '2':0} ; 
+        columns = {'1':0, '2':0} ; 
+        for( j = 0;  j< board.length; j++ ){
+            let rowPointer = board[i][j]
+            let columnPointer = board[j][i]
+            rowPointer == 0 ? zero++ : rows[`${rowPointer}`] += 1 
+            columnPointer !== 0 ? columns[`${columnPointer}`] += 1 : null  
+        } 
+        if (rows['1'] == 3 || columns['1'] == 3){return 1} 
+        if (rows['2'] == 3 || columns['2'] == 3){return 2} 
+    } 
+     
+     
+    
+    return zero == 0 ? 0 : -1
 }
 
 let a = [
@@ -29,12 +45,12 @@ let b = [
 ]
 let c = [
     [1, 2, 2],
-    [2, 2, 0],
-    [1, 1, 1]
+    [1, 2, 0],
+    [1, 0, 1]
 ]
 let d = [
-    [0, 0, 2],
-    [1, 1, 2],
+    [0, 1, 2],
+    [1, 0, 2],
     [2, 1, 2]
 ]
 
