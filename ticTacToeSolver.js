@@ -11,4 +11,34 @@
 // 1 if "X" won,
 // 2 if "O" won,
 // 0 if it's a cat's game (i.e. a draw).
-// You may assume that the board passed in is valid in the context of a game of Tic-Tac-Toe.
+// You may assume that the board passed in is valid in the context of a game of Tic-Tac-Toe. 
+ 
+function isSolved(board){
+
+}
+
+let a = [
+    [1, 0, 2],
+    [1, 2, 0],
+    [0, 0, 0]
+]
+let b = [
+    [1, 2, 1],
+    [2, 2, 1],
+    [1, 1, 2]
+]
+let c = [
+    [1, 2, 2],
+    [2, 2, 0],
+    [1, 1, 1]
+]
+let d = [
+    [0, 0, 2],
+    [1, 1, 2],
+    [2, 1, 2]
+]
+
+console.log(isSolved(a)) // -1
+console.log(isSolved(b)) // 0
+console.log(isSolved(c)) // 1
+console.log(isSolved(d)) // 2
