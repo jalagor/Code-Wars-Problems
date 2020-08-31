@@ -12,6 +12,6 @@
 // For h = 4, H = 16, S = 3, the output should be 20.
 // For h = 8, H = 9, S = 37, the output should be 42.5869 
 
-squirrel=(h,H,S)=> 
+squirrel=(h,H,S)=> ((h**2 + S**2) ** .5) * (H/h)
 
 console.log( squirrel(4, 16, 3) )
