@@ -12,6 +12,7 @@
 // For h = 4, H = 16, S = 3, the output should be 20.
 // For h = 8, H = 9, S = 37, the output should be 42.5869 
 
-squirrel=(h,H,S)=> ((h**2 + S**2) ** .5) * (H/h)
+squirrel=(h,H,S)=> Number((((h**2 + S**2) ** .5) * (H/h)).toFixed(4).replace(/.0000/, ''))
 
 console.log( squirrel(4, 16, 3) )
+console.log( squirrel(8, 9, 37) )
