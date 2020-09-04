@@ -7,7 +7,15 @@ false depending on whether the string is found in the array as per Boggle rules.
 Test cases will provide various array and string sizes (squared arrays up to 150x150 
 and strings up to 150 uppercase letters). You do not have to check whether the string 
 is a real word or not, only if it's a valid guess.*/  
-  
+
+
+
+// needs: find starting point in board with first letter, check for multiple instances of starting point, 
+// store potential coordinates, check adjacent coordinates for next letter, 
+// if found: remove initial coordinate from board && repeat adjacency check; return true if last letter is matched, 
+// else no match: check next potential starting point and repeat adjacency check 
+// else no starting points return false 
+
 function checkWord( board, word ) {
 
 }
